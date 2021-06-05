@@ -11,8 +11,7 @@ def create_app():
     app = Flask(__name__)
     # default configurations
     app.config.from_object('config.Config')
-
-    # bootstrap.init_app(app)
+    
     db.init_app(app)
     login_manager.init_app(app)
 

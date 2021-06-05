@@ -1,0 +1,157 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-image: url(../static/imgs/bg.jpg);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-wrapper {
+    display: flex;
+    width: 55%;
+    height: 500px;
+    margin-top: 80px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgb(0, 0, 0);
+}
+
+.form-div {
+    background: white;
+    width: 50%;
+    padding: 8%;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.5) );
+    text-align: center;
+    border-radius: 10px 0px 0px 10px ;
+
+} 
+
+.form-div h2 {
+    color: rgb(49, 50, 51);
+}
+
+.welcome {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 15px 15px 15px;
+    background-image: url(../static/imgs/tulips-6255868_1920.jpg);
+    background-size: cover;
+    text-align: center;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.label-input {
+    width: 80%;
+    height: 35px;
+    border-radius: 55px;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.5) );
+    align-items: center;
+    margin: 8px;
+    padding-left: 40px;
+    position: relative;
+    display: flex;
+}
+
+.input {
+    background-color:transparent; 
+    border: none;
+    outline: none;
+    width: 90%;
+}
+
+.input::placeholder {
+    position: relative;
+}
+
+.icon-modify {
+    position: absolute;
+    left: 10px;
+    top:10px;
+    color: rgb(151, 153, 155);
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.text {
+    color: rgb(56, 56, 56);
+    padding: 10px;
+    font-size: small;
+}
+
+.btn {
+    margin: 10px;
+    cursor: pointer;
+    width: 40%;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #406b56;
+    border: 1px solid #406b56;
+    color: white;
+    transition: background-color .5s;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 1px solid #406b56;
+    color: #406b56;
+}
+
+.btn-2 {
+    cursor: pointer;
+    width: 50%;
+    padding: 15px;
+    margin: 0px 0px 15px 0px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid #ebc444;
+    transition: background-color .5s;
+    color: #ebc444;
+}
+
+.btn-2:hover {
+    background-color: #ebc444;
+    color: white;
+}
+
+.check {
+    text-transform: uppercase;
+    margin: 15px 0px 10px 5px;
+    color: rgb(121, 122, 122);
+}
+
+.glass {
+    width: 90%;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 10px;
+    background:#335243e0;
+    backdrop-filter: blur(2.5px);
+}
+
+.glass h5 {
+    color: #ebc444;
+    font-weight: bold;
+    margin: 25px 20px 20px 20px;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 650px){
+    .form-div{
+        width: 90%;
+        border-radius: 10px 10px;
+    }
+    .welcome{
+        display: none;
+    }
+}

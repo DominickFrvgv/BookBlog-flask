@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<main>
+    <section class="glass2">
+        <div class="dashboard">
+        <h2>BookBlog</h2>
+        <div class="user">
+            <h3>{{ current_user.username }}</h3>
+            {% if current_user.about_me != None %}
+                <p>{{ current_user.about_me}}</p>
+            {% endif %}
+            <a href="{{ url_for('main.edit_profile') }}"><i class="far fa-edit"></i></a>
+        </div>
+
+        <form method="POST">
+            <p class="text">Add a book youve read</p>
+            {{ form.hidden_tag() }}
+            <label class="label-input">
+                <i class="fas fa-book icon-modify"></i>
+                {{form.title(placeholder="title", class="input")}}
+            </label>
+
+            <label class="label-input">
+                <i class="far fa-edit icon-modify"></i>
+                {{form.author(placeholder="author", class="input")}}
+            </label>
+
+            <label class="label-input">
+                <i class="fas fa-star-half-alt icon-modify"></i>
+                {{form.rating(placeholder="rating", class="input")}}
+            </label>
+
+            {{form.submit(class="btn-idx")}}
+        </form>
+        
+        <button class="btn-idx"><a href="{{ url_for('auth.logout') }}">Log Out</a></button>
+
+        </div>
+        <div class="books">
+        {% if posts %}
+            {% for post in posts %}
+                <div class="cards">
+                    <div class="card">
+                    <div class="card-info">
+                        <h2>{{ post.title}}</h2>
+                        <p>{{ post.author}}</p>
+                        <p>{{ post.comment }}</p>
+                        
+                    </div>
+                    <h2 class="rating">{{ post.rating }}</h2>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </section>
+  </main>
+{%endblock%}

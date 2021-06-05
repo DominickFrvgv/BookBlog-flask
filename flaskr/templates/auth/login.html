@@ -1,0 +1,42 @@
+{% extends './base.html'%}
+
+{% block loginlogout %}{% endblock%}
+
+{% block log_reg %}
+<div class="container">
+    <div class="form-wrapper">
+        <div class="form-div">
+            <h2>Log In To Your Account</h2>
+            <hr>
+            <p class="text">Sign In</p>
+            <form method="POST">
+                {{ form.hidden_tag() }}
+                <label class="label-input">
+                    <i class="fas fa-envelope icon-modify"></i>
+                    {{form.email(placeholder="Email", class="input")}}
+                </label>
+
+                <label class="label-input">
+                    <i class="fas fa-lock icon-modify"></i>
+                    {{form.password(placeholder="Password", class="input")}}
+                </label>
+
+                <label class="text">
+                    {{ form.remember(class="check", value="remember-me")}}
+                    {{ form.remember.label(class="check")}}
+                </label>
+
+                {{form.submit(class="btn", placeholder="Sign Up")}}
+            </form>
+        </div>
+            
+        <div class="welcome">
+            <div class="glass">
+                <h5>Hey! Don't have an account yet?</h5>
+                <a href="{{url_for('auth.register')}}"><button class="btn-2">Sign in</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

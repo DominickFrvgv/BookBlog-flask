@@ -1,0 +1,13 @@
+Jinja2==3.0.1
+MarkupSafe==2.0.1
+Werkzeug==2.0.1
+click==8.0.1
+colorama==0.4.4 
+flask==2.0.1 
+itsdangerous==2.0.1
+SQLAlchemy==1.4.15 
+flask-sqlalchemy==2.5.1 
+greenlet==1.1.0
+flask-login==0.5.0
+WTForms==2.3.3 
+flask-wtf==0.15.1

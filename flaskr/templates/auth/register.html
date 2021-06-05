@@ -1,0 +1,49 @@
+{% extends './base.html'%}
+
+{% block loginlogout %}{% endblock%}
+
+{% block log_reg %}
+<div class="container">
+    <div class="form-wrapper">
+        <div class="form-div">
+            <h2>Create an Account</h2>
+            
+            <hr>
+            <div class="or"></div>
+            <p class="text">Sign Up</p>
+            <form method="POST">
+                {{ form.hidden_tag() }}
+                <label class="label-input">
+                    <i class="fas fa-user icon-modify"></i>
+                    {{form.username(placeholder="Username", class="input")}}
+                </label>
+
+                <label class="label-input">
+                    <i class="fas fa-envelope icon-modify"></i>
+                    {{form.email(placeholder="Email", class="input")}}
+                </label>
+
+                <label class="label-input">
+                    <i class="fas fa-lock icon-modify"></i>
+                    {{form.password(placeholder="Password", class="input")}}
+                </label>
+
+                <label class="label-input">
+                    <i class="fas fa-lock icon-modify"></i>
+                    {{form.password_confirm( placeholder="Confirm password", class="input")}}
+                </label>
+
+                {{form.submit(class="btn", placeholder="Sign Up")}}
+            </form>
+        </div>
+            
+        <div class="welcome">
+            <div class="glass">
+                <h5>Hey! Already have an account?</h5>
+                <a href="{{url_for('auth.login')}}"><button class="btn-2">Sign in</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

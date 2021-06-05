@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+
+{%block content%}
+<p class="text">Sign In</p>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <label class="label-input">
+        <i class="fas fa-envelope icon-modify"></i>
+        {{form.about.label}}
+        {{ form.about()}}
+    </label>
+
+    <button class="btn">{{form.submit.label}}</button>
+{%endblock%}

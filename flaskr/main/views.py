@@ -5,8 +5,8 @@ from .forms import edit_Form, book_Form
 from flask_login import login_required, current_user
 from .. import db
 
-@login_required
 @main.route('/', methods=['GET', 'POST'])
+@login_required
 def index():
     form = book_Form()
     if form.validate_on_submit():
